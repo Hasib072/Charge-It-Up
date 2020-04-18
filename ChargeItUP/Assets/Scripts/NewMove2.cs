@@ -21,7 +21,10 @@ public class NewMove2 : MonoBehaviour
     public float y;
     public float y2;
     public float Time;
-    //private float Time2;
+    public LevelLoader LL2;
+
+
+    
 
     private void Awake()
     {
@@ -51,6 +54,7 @@ public class NewMove2 : MonoBehaviour
 
         if (other.tag == "Finish")
         {
+            LL2.NextLevel();
             print("The End");
         }
     }
