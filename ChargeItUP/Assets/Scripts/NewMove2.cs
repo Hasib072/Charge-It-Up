@@ -23,8 +23,14 @@ public class NewMove2 : MonoBehaviour
     public float Time;
     public LevelLoader LL2;
 
+    public GameObject Cell1;
+    public GameObject Cell2;
+    public GameObject Cell3;
+    public GameObject Cell4;
+    public GameObject Cell5;
 
-    
+
+
 
     private void Awake()
     {
@@ -46,10 +52,30 @@ public class NewMove2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Chrg")
+        if (other.name == "Cell1")
         {
             Charge = Charge + 1;
-           // Destroy(GameObject.FindWithTag("Chrg"));
+            Destroy(Cell1);
+        }
+        if (other.name == "Cell2")
+        {
+            Charge = Charge + 1;
+            Destroy(Cell2);
+        }
+        if (other.name == "Cell3")
+        {
+            Charge = Charge + 1;
+            Destroy(Cell3);
+        }
+        if (other.name == "Cell4")
+        {
+            Charge = Charge + 1;
+            Destroy(Cell4);
+        }
+        if (other.name == "Cell5")
+        {
+            Charge = Charge + 1;
+            Destroy(Cell5);
         }
 
         if (other.tag == "Finish")
@@ -175,6 +201,7 @@ public class NewMove2 : MonoBehaviour
         if (Charge == 0)
         {
             print("Game over");
+            LL2.ReLoad();
         }
 
 
