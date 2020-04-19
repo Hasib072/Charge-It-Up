@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trans: {fileID: 3261186085745719941}
-  Time: 2
+  time: 3
 --- !u!1 &3261186085745719939
 GameObject:
   m_ObjectHideFlags: 0

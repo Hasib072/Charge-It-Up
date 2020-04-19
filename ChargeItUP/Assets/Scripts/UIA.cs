@@ -11,8 +11,8 @@ public class UIA : MonoBehaviour
     public GameObject IMG3;
     public GameObject IMG2;
     public GameObject IMG1;
-    public GameObject PlayB;
-    public GameObject ExitB;
+    //public GameObject PlayB;
+    //public GameObject ExitB;
     public GameObject Title;
     public Vector3 TSize;
     public float Vx;
@@ -32,10 +32,9 @@ public class UIA : MonoBehaviour
         LeanTween.scale(IMG1, TSize, 2).setLoopPingPong();
         LeanTween.scale(IMG2, TSize, 2).setLoopPingPong();
         LeanTween.scale(IMG3, TSize, 2).setLoopPingPong();
-        LeanTween.moveLocalX(PlayB, Rx2, 3).setEaseOutElastic();
-        LeanTween.moveLocalX(ExitB, Rx2, 3).setEaseOutElastic();
+        //LeanTween.moveLocalX(PlayB, Rx2, 3).setEaseOutElastic();
+        //LeanTween.moveLocalX(ExitB, Rx2, 3).setEaseOutElastic();
         LeanTween.scale(Title, TSize, 2).setLoopPingPong();
-
 
 
     }
@@ -43,6 +42,6 @@ public class UIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

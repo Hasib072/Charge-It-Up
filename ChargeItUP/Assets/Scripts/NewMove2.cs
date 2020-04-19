@@ -129,7 +129,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveF = true;
             Charge = Charge - 1;
-            print("s");
+           
         }
         else
         {
@@ -141,7 +141,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveB = true;
             Charge = Charge - 1;
-            print("w");
+            
         }
         else
         {
@@ -152,7 +152,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveR = true;
             Charge = Charge - 1;
-            print("d");
+            
         }
         else
         {
@@ -164,7 +164,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveL = true;
             Charge = Charge - 1;
-            print("a");
+            
         }
         else
         {

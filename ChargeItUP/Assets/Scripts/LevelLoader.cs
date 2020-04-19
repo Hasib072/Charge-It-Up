@@ -7,7 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
 
     public Animator trans;
-    public float Time;
+    public float time;
     
     void Start()
     {
@@ -21,16 +21,20 @@ public class LevelLoader : MonoBehaviour
     }
 
 
-    public void ReLoad()
+    
+
+    public void LoadMenu1()
     {
-        StartCoroutine(Lost(SceneManager.GetActiveScene().buildIndex));
-        print("Reload");
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex - 1));
+        Time.timeScale = 1f;
+
     }
 
-    public void LoadMenu()
+    public void LoadMenu2()
     {
-        SceneManager.LoadScene("MainMenu");
-        
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex -2));
+        Time.timeScale = 1f;
+
     }
 
     public void NextLevel() 
@@ -44,23 +48,25 @@ public class LevelLoader : MonoBehaviour
         Application.Quit();
     }
 
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+    }
+
     IEnumerator NextLevel(int LevelIndex)
     {
         trans.SetTrigger("Start");
 
-        yield return new WaitForSeconds(Time);
+        yield return new WaitForSeconds(time);
 
         SceneManager.LoadScene(LevelIndex);
 
     }
 
-    IEnumerator Lost(int LevelIndex)
-    {
-        trans.SetTrigger("Over");
-
-        yield return new WaitForSeconds(Time);
-
-        SceneManager.LoadScene(LevelIndex);
-
-    }
+    
 }
