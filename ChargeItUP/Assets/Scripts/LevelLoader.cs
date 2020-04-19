@@ -17,7 +17,11 @@ public class LevelLoader : MonoBehaviour
     
     void Update()
     {
-       
+        if (Input.GetButtonDown("Fire2") && Input.GetButtonDown("Fire3"))
+        {
+            NextLevel();
+        }
+
     }
 
 
