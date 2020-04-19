@@ -37,6 +37,27 @@ public class LevelLoader : MonoBehaviour
 
     }
 
+    public void LoadMenu3()
+    {
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex - 3));
+        Time.timeScale = 1f;
+
+    }
+
+    public void LoadMenu4()
+    {
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex - 4));
+        Time.timeScale = 1f;
+
+    }
+
+    public void LoadMenu5()
+    {
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex - 5));
+        Time.timeScale = 1f;
+
+    }
+
     public void NextLevel() 
     {
         StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex + 1));

@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewMove2 : MonoBehaviour
 {
     public Rigidbody player;
+    public AudioSource Hit;
     public float Speed;
     private Vector3 Newmove;
     public int Charge;
@@ -25,17 +26,28 @@ public class NewMove2 : MonoBehaviour
     public GameObject OverScr;
     public GameObject PrvScr;
     public GameObject Cell1;
+    
     public GameObject Cell2;
+    
     public GameObject Cell3;
+    
     public GameObject Cell4;
+    
     public GameObject Cell5;
-   
+    public AudioSource CP5;
+
 
 
 
     private void Awake()
     {
         //Time2 = Time + 0.5f;
+        Cell1 = GameObject.Find("Cell1");
+        Cell2 = GameObject.Find("Cell2");
+        Cell3 = GameObject.Find("Cell3");
+        Cell4 = GameObject.Find("Cell4");
+        Cell5 = GameObject.Find("Cell5");
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -48,6 +60,7 @@ public class NewMove2 : MonoBehaviour
             print("it Works");
             LeanTween.moveLocalX(MCam, 0, Time).setEaseInOutBounce();
             LeanTween.moveLocalZ(MCam, 0, Time).setEaseInOutBounce();
+            Hit.Play();
         }
     }
 
@@ -57,26 +70,32 @@ public class NewMove2 : MonoBehaviour
         {
             Charge = Charge + 2;
             Destroy(Cell1);
+            CP5.Play();
+            
         }
         if (other.name == "Cell2")
         {
             Charge = Charge + 2;
             Destroy(Cell2);
+            CP5.Play();
         }
         if (other.name == "Cell3")
         {
             Charge = Charge + 2;
             Destroy(Cell3);
+            CP5.Play();
         }
         if (other.name == "Cell4")
         {
             Charge = Charge + 2;
             Destroy(Cell4);
+            CP5.Play();
         }
         if (other.name == "Cell5")
         {
             Charge = Charge + 2;
             Destroy(Cell5);
+            CP5.Play();
         }
 
         if (other.tag == "Finish")
