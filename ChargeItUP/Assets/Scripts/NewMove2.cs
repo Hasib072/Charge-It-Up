@@ -22,13 +22,14 @@ public class NewMove2 : MonoBehaviour
     public float y2;
     public float Time;
     public LevelLoader LL2;
-
+    public GameObject OverScr;
+    public GameObject PrvScr;
     public GameObject Cell1;
     public GameObject Cell2;
     public GameObject Cell3;
     public GameObject Cell4;
     public GameObject Cell5;
-
+   
 
 
 
@@ -54,27 +55,27 @@ public class NewMove2 : MonoBehaviour
     {
         if (other.name == "Cell1")
         {
-            Charge = Charge + 1;
+            Charge = Charge + 2;
             Destroy(Cell1);
         }
         if (other.name == "Cell2")
         {
-            Charge = Charge + 1;
+            Charge = Charge + 2;
             Destroy(Cell2);
         }
         if (other.name == "Cell3")
         {
-            Charge = Charge + 1;
+            Charge = Charge + 2;
             Destroy(Cell3);
         }
         if (other.name == "Cell4")
         {
-            Charge = Charge + 1;
+            Charge = Charge + 2;
             Destroy(Cell4);
         }
         if (other.name == "Cell5")
         {
-            Charge = Charge + 1;
+            Charge = Charge + 2;
             Destroy(Cell5);
         }
 
@@ -128,6 +129,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveF = true;
             Charge = Charge - 1;
+            print("s");
         }
         else
         {
@@ -139,6 +141,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveB = true;
             Charge = Charge - 1;
+            print("w");
         }
         else
         {
@@ -149,6 +152,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveR = true;
             Charge = Charge - 1;
+            print("d");
         }
         else
         {
@@ -160,6 +164,7 @@ public class NewMove2 : MonoBehaviour
         {
             MoveL = true;
             Charge = Charge - 1;
+            print("a");
         }
         else
         {
@@ -197,11 +202,13 @@ public class NewMove2 : MonoBehaviour
             player.transform.LookAt(player.transform.position + new Vector3(-Newmove.z, 0, -Newmove.x));
         }
 
-
-        if (Charge == 0)
+        
+        if (Charge < 0)
         {
             print("Game over");
-            LL2.ReLoad();
+            OverScr.SetActive(true);
+            player.Sleep();
+            PrvScr.SetActive(false);
         }
 
 

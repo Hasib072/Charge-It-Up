@@ -17,20 +17,27 @@ public class LevelLoader : MonoBehaviour
     
     void Update()
     {
-        
+       
     }
 
 
     public void ReLoad()
     {
-        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex));
+        StartCoroutine(Lost(SceneManager.GetActiveScene().buildIndex));
+        print("Reload");
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        
+    }
 
     public void NextLevel() 
     {
         StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
+
 
     public void ExitGame()
     {
@@ -40,6 +47,16 @@ public class LevelLoader : MonoBehaviour
     IEnumerator NextLevel(int LevelIndex)
     {
         trans.SetTrigger("Start");
+
+        yield return new WaitForSeconds(Time);
+
+        SceneManager.LoadScene(LevelIndex);
+
+    }
+
+    IEnumerator Lost(int LevelIndex)
+    {
+        trans.SetTrigger("Over");
 
         yield return new WaitForSeconds(Time);
 

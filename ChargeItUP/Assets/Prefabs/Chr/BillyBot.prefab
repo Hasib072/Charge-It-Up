@@ -174,7 +174,7 @@ Transform:
   m_GameObject: {fileID: 4326304796521405955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.36, y: 1.53, z: -5.5}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4326304796521628193}
   - {fileID: 4326304796521628197}
@@ -232,12 +232,18 @@ MonoBehaviour:
   Speed: 80
   Charge: 10
   MCam: {fileID: 0}
-  x: -30
-  x2: 40
-  y: -30
-  y2: 40
+  x: -50
+  x2: 60
+  y: -50
+  y2: 60
   Time: 0.6
   LL2: {fileID: 0}
+  OverScr: {fileID: 0}
+  Cell1: {fileID: 0}
+  Cell2: {fileID: 0}
+  Cell3: {fileID: 0}
+  Cell4: {fileID: 0}
+  Cell5: {fileID: 0}
 --- !u!1 &4326304796521405957
 GameObject:
   m_ObjectHideFlags: 0
