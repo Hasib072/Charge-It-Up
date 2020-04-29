@@ -102,6 +102,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void RestartLV()
+    {
+        StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex));
+        Time.timeScale = 1f;
+    }
 
     public void ExitGame()
     {

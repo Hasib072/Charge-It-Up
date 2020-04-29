@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class LeenAnima : MonoBehaviour
 {
-    public GameObject Cell1;
-    public GameObject Cell2;
-    public GameObject Cell3;
-    public GameObject Cell4;
-    public GameObject Cell5;
+    private GameObject Cell1;
+    private GameObject Cell2;
+    private GameObject Cell3;
+    private GameObject Cell4;
+    private GameObject Cell5;
+    private GameObject CamJ;
+    
     public float t;
     public float y;
     
@@ -19,15 +21,18 @@ public class LeenAnima : MonoBehaviour
         Cell3 = GameObject.Find("Cell3");
         Cell4 = GameObject.Find("Cell4");
         Cell5 = GameObject.Find("Cell5");
+        CamJ = GameObject.Find("CamJ");
 
 
 
-
+        LeanTween.rotateY(CamJ, 75, 5).setLoopPingPong();
         LeanTween.rotateY(Cell1, y, t).setLoopPingPong();
         LeanTween.rotateY(Cell2, y, t).setLoopPingPong();
         LeanTween.rotateY(Cell3, y, t).setLoopPingPong();
         LeanTween.rotateY(Cell4, y, t).setLoopPingPong();
         LeanTween.rotateY(Cell5, y, t).setLoopPingPong();
+        
+
 
     }
 

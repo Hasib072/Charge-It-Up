@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     private GameObject PlayerBody;
     private Rigidbody Player;
     public float Speed;
-    public int Charge;
+    //public int Charge;
     private Vector3 Newmove;
     private bool MoveW, MW, MoveS, MS, MoveA, MA, MoveD, MD, IsStop;
     

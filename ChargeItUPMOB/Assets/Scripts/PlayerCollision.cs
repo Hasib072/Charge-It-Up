@@ -18,9 +18,9 @@ public class PlayerCollision : MonoBehaviour
     
     private void Awake()
     {
-        
-        x2 = 50;
-        x = -(x2);
+
+        x2 = Random.Range(-1,1)*100;
+        x = Random.Range(-1,1)*100;
         PowerUpObj = GameObject.Find("Powerup");
         PowerUp = PowerUpObj.GetComponent<AudioSource>();
         PlayerBody = GameObject.Find("Billy");
@@ -44,8 +44,8 @@ public class PlayerCollision : MonoBehaviour
         if (other.gameObject.tag != "Floor" && other.gameObject.tag != "Chrg" && other.gameObject.tag != "Finish")
         {
             
-            LeanTween.moveLocalX(MCam, Random.Range(x, x2), Time).setEaseInOutBounce();
-            LeanTween.moveLocalZ(MCam, Random.Range(x, x2), Time).setEaseInOutBounce();
+            LeanTween.moveLocalX(MCam, x, Time).setEaseInOutBounce();
+            LeanTween.moveLocalZ(MCam, x2, Time).setEaseInOutBounce();
             Charge = Charge - 1;
             LeanTween.moveLocalX(MCam, 0, Time).setEaseInOutBounce();
             LeanTween.moveLocalZ(MCam, 0, Time).setEaseInOutBounce();
