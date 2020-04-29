@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\LifeCount.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\NewMove2.cs" />
+    <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\SwipeControl.cs" />
     <Compile Include="Assets\Scripts\UIA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

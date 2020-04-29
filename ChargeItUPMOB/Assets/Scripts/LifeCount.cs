@@ -6,21 +6,39 @@ using UnityEngine.UI;
 public class LifeCount : MonoBehaviour
 {
 
+    private GameObject PlayerBody;
+    private Rigidbody Player;
+    private GameObject OverScr;
+    private GameObject PrvScr;
     public Text Life;
-    private GameObject Player;
-    private Movement Pl;
+    private GameObject PlayerColl;
+    private PlayerCollision Pl;
    
     
     void Awake()
     {
-        Player = GameObject.Find("Billy");
-        Pl = Player.GetComponent<Movement>();
+        PlayerColl = GameObject.Find("BColl");
+        Pl = PlayerColl.GetComponent<PlayerCollision>();
+
+        PlayerBody = GameObject.Find("Billy");
+        Player = PlayerBody.GetComponent<Rigidbody>();
+
+        OverScr = GameObject.Find("GameOverScr");
+        PrvScr = GameObject.Find("MUI");
+
+        OverScr.SetActive(false);
     }
 
     
     void Update()
     {
-        
+        if (Pl.Charge < 0)
+        {
+            print("Game over");
+            OverScr.SetActive(true);
+            Player.Sleep();
+            PrvScr.SetActive(false);
+        }
         Life.text = Pl.Charge.ToString();
     }
 }

@@ -12,10 +12,7 @@ public class Movement : MonoBehaviour
     public int Charge;
     private Vector3 Newmove;
     private bool MoveW, MW, MoveS, MS, MoveA, MA, MoveD, MD, IsStop;
-    private GameObject MCam;
-    private AudioSource Hit;
-    private float x, x2;    
-    private float Time = 0.6f;
+    
 
 
     void Awake()
@@ -23,54 +20,25 @@ public class Movement : MonoBehaviour
         
         MoveW = MoveS = MoveA = MoveD = IsStop = false;
 
-        x2 = 50;
-        x = -(x2);
+        
         
 
         PlayerBody = GameObject.Find("Billy");
         Player = PlayerBody.GetComponent<Rigidbody>();
-        Hit = PlayerBody.GetComponent<AudioSource>();
+        
 
-        MCam = GameObject.Find("CamJ");
-
+       
 
     }
 
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag != "Floor")
-        {
-
-            LeanTween.moveLocalX(MCam, Random.Range(x, x2), Time).setEaseInOutBounce();
-            LeanTween.moveLocalZ(MCam, Random.Range(x, x2), Time).setEaseInOutBounce();
-            Charge = Charge - 1;
-            LeanTween.moveLocalX(MCam, 0, Time).setEaseInOutBounce();
-            LeanTween.moveLocalZ(MCam, 0, Time).setEaseInOutBounce();
-            Hit.Play();
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Chrg"))
-        {
-            other.gameObject.SetActive(false);
-            Charge = Charge + 2;
-        }
-        if (other.gameObject.CompareTag("Finish"))
-        {
-            print("End");
-        }
-    }
-
+   
 
     void FixedUpdate()
     {
 
 
-        print(MA);
-        print(Player.velocity);
+        //print(MA);
+        //print(Player.velocity);
         
 
         if (Player.velocity.x == 0f && Player.velocity.z == 0f)
