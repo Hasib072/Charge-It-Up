@@ -7,14 +7,14 @@ public class SwipeControl : MonoBehaviour
     public bool Tap,SwipeU,SwipeD,SwipeR,SwipeL;
     private bool isDraging = false;
     public Vector2 StartTouch, SwipeDelta;
-    public NewMove2 Mov;
+    public Movement Mov;
     private GameObject ScriptBody;
 
 
     private void Awake()
     {
-        ScriptBody = GameObject.Find("BillyBot");
-        Mov = ScriptBody.GetComponent<NewMove2>();
+        ScriptBody = GameObject.Find("Billy");
+        Mov = ScriptBody.GetComponent<Movement>();
 
     }
 
@@ -77,20 +77,16 @@ public class SwipeControl : MonoBehaviour
                 {
                     //Right
                     SwipeR = true;
-                    SwipeL = false;
-                    SwipeU = false;
-                    SwipeD = false;
-                    print("Swiped Right");
+
+                    //print("Swiped Right");
                     Mov.MoveRight();
                 }
                 else if (x < 0)
                 {
                     //Left
                     SwipeL = true;
-                    SwipeR = false;
-                    SwipeU = false;
-                    SwipeD = false;
-                    print("Swiped left");
+                    
+                    //print("Swiped left");
                     Mov.MoveLeft();
                 }
                 else
@@ -105,21 +101,17 @@ public class SwipeControl : MonoBehaviour
                 {
                     //UP.
                     SwipeU = true;
-                    SwipeR = false;
-                    SwipeL = false;
-                    SwipeD = false;
-                    print("Swiped up");
-                    Mov.MoveBackward();
+                   
+                    //print("Swiped up");
+                    Mov.MoveForward();
                 }
                 else if (y < 0)
                 {
                     //Down.
                     SwipeD = true;
-                    SwipeR = false;
-                    SwipeL = false;
-                    SwipeU = false;
-                    print("Swiped Down");
-                    Mov.MoveForward();
+                    
+                    //print("Swiped Down");
+                    Mov.MoveBackward();
                 }
                 else
                 {
@@ -139,10 +131,8 @@ public class SwipeControl : MonoBehaviour
     }
     private void Mreset() 
     {
-        Mov.NOMoveBackward();
-        Mov.NOMoveForward();
-        Mov.NOMoveLeft();
-        Mov.NOMoveRight();
+        Mov.NOMove();
+        
     }
 
 

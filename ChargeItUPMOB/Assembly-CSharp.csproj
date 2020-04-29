@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\LeenAnima.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\LifeCount.cs" />
+    <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\NewMove2.cs" />
     <Compile Include="Assets\Scripts\SwipeControl.cs" />
     <Compile Include="Assets\Scripts\UIA.cs" />
@@ -175,6 +176,9 @@
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
       <HintPath>P:/Projects/UnityP/Charge-It-UpMOB/ChargeItUPMOB/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>P:/Projects/UnityP/Charge-It-UpMOB/ChargeItUPMOB/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>P:/Projects/UnityP/Charge-It-UpMOB/ChargeItUPMOB/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -186,6 +190,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>P:/Projects/UnityP/Charge-It-UpMOB/ChargeItUPMOB/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>P:/Projects/UnityP/Charge-It-UpMOB/ChargeItUPMOB/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>P:/Projects/UnityP/Charge-It-UpMOB/ChargeItUPMOB/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

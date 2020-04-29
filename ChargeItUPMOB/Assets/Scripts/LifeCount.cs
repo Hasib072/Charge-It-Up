@@ -7,12 +7,14 @@ public class LifeCount : MonoBehaviour
 {
 
     public Text Life;
-    public NewMove2 Pl;
+    private GameObject Player;
+    private Movement Pl;
    
     
-    void Start()
+    void Awake()
     {
-        
+        Player = GameObject.Find("Billy");
+        Pl = Player.GetComponent<Movement>();
     }
 
     

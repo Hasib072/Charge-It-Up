@@ -64,6 +64,7 @@ public class NewMove2 : MonoBehaviour
         }
     }
 
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Cell1")
