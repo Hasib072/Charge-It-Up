@@ -42,10 +42,8 @@ public class PlayerCollision : MonoBehaviour
         if (other.gameObject.tag != "Floor" && other.gameObject.tag != "Chrg" && other.gameObject.tag != "Finish")
         {
 
-            int R = Random.Range(0, 4);
-            Rv = RandomV[R];
-            Debug.Log(Rv);
-            Debug.Log(R);
+
+            Rv = RandomV[Random.Range(0, 4)];
 
             LeanTween.moveLocalX(MCam, Rv, Time).setEaseInOutBounce();
             LeanTween.moveLocalZ(MCam, Rv, Time).setEaseInOutBounce();

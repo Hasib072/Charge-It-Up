@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -426,12 +426,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e34f9f776308d449f761d74c259e99, type: 3}
+--- !u!1 &679730487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5142070968079249813, guid: 54a0df714592dba489943bd5040b2a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 2475955501323420052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &679730488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679730487}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 1
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: bee35493cbacf36478f9d4872ac55039, type: 2}
 --- !u!1 &709123129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2560534515739545701, guid: e5b798e8a34881f4fa64edb6de67a02f,
     type: 3}
   m_PrefabInstance: {fileID: 504828859}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &709123130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709123129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: bee35493cbacf36478f9d4872ac55039, type: 2}
 --- !u!114 &709123134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1097,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6957309572641078124, guid: 54a0df714592dba489943bd5040b2a45,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a0df714592dba489943bd5040b2a45, type: 3}
 --- !u!1001 &3221010636970129396
@@ -1125,11 +1170,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Billy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221010637111129128, guid: dd444ead2e614bb43a2f21d4c221a654,
-        type: 3}
-      propertyPath: Charge
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd444ead2e614bb43a2f21d4c221a654, type: 3}
