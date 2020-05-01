@@ -13,8 +13,8 @@ public class LifeCount : MonoBehaviour
     public Text Life;
     private GameObject PlayerColl;
     private PlayerCollision Pl;
-    private GameObject Exit;
-    private LevelLoader LevelLoader;
+    
+    
 
     void Awake()
     {
@@ -27,8 +27,7 @@ public class LifeCount : MonoBehaviour
         OverScr = GameObject.Find("GameOverScr");
         PrvScr = GameObject.Find("MUI");
 
-        Exit = GameObject.Find("Exit");
-        LevelLoader = Exit.GetComponent<LevelLoader>();
+       
 
         OverScr.SetActive(false);
     }
@@ -36,13 +35,13 @@ public class LifeCount : MonoBehaviour
     
     void Update()
     {
-        if (Pl.Charge < 0)
+        if (Pl.Charge <= 0)
         {
-            print("Game over");
+            //print("Game over");
             OverScr.SetActive(true);
             Player.Sleep();
             PrvScr.SetActive(false);
-            LevelLoader.Pause();
+            Time.timeScale = 0f;
         }
         Life.text = Pl.Charge.ToString();
     }

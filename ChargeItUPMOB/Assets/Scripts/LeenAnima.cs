@@ -25,7 +25,7 @@ public class LeenAnima : MonoBehaviour
 
 
 
-        LeanTween.rotateY(CamJ, 75, 5).setLoopPingPong();
+        LeanTween.rotateY(CamJ, 75, 7).setEaseInOutCubic().setLoopPingPong();
         LeanTween.rotateY(Cell1, y, t).setLoopPingPong();
         LeanTween.rotateY(Cell2, y, t).setLoopPingPong();
         LeanTween.rotateY(Cell3, y, t).setLoopPingPong();

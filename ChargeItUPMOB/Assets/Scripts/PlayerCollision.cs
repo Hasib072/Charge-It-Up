@@ -39,7 +39,7 @@ public class PlayerCollision : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Finish"))
         {
-            print("End");
+            //print("End");
         }
         if (other.gameObject.tag != "Floor" && other.gameObject.tag != "Chrg" && other.gameObject.tag != "Finish")
         {

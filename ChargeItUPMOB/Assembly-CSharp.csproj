@@ -98,6 +98,7 @@
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\EventAnimation.cs" />
     <Compile Include="Assets\Scripts\LeenAnima.cs" />
+    <Compile Include="Assets\Scripts\LevelComP.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\LifeCount.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />

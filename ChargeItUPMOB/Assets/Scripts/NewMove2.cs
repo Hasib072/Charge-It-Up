@@ -155,13 +155,13 @@ public class NewMove2 : MonoBehaviour
         {
             MoveF = true;
             Charge = Charge - 1;
-            print("MF True");
+            //print("MF True");
            
         }
         else
         {
             MoveF = false;
-            print("MF False");
+            //print("MF False");
         }
 
 
@@ -169,13 +169,13 @@ public class NewMove2 : MonoBehaviour
         {
             MoveB = true;
             Charge = Charge - 1;
-            print("MB True");
+            //print("MB True");
 
         }
         else
         {
             MoveB = false;
-            print("MB False");
+            //print("MB False");
         }
 
         if (PStop == true && Input.GetKeyDown("d") || PStopx == true && MR == true)
