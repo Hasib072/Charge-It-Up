@@ -10,7 +10,9 @@ public class PlayerCollision : MonoBehaviour
     public int Charge;
     private AudioSource Hit;
     private GameObject MCam;
-    private float x, x2;
+    
+    private int[] RandomV = {-150,100,150,-100};
+    private int Rv;
     private float Time = 0.6f;
    
     
@@ -19,8 +21,7 @@ public class PlayerCollision : MonoBehaviour
     private void Awake()
     {
 
-        x2 = Random.Range(-1,1)*100;
-        x = Random.Range(-1,1)*100;
+        
         PowerUpObj = GameObject.Find("Powerup");
         PowerUp = PowerUpObj.GetComponent<AudioSource>();
         PlayerBody = GameObject.Find("Billy");
@@ -37,21 +38,25 @@ public class PlayerCollision : MonoBehaviour
             Charge = Charge + 2;
             PowerUp.Play();
         }
-        if (other.gameObject.CompareTag("Finish"))
-        {
-            //print("End");
-        }
+        
         if (other.gameObject.tag != "Floor" && other.gameObject.tag != "Chrg" && other.gameObject.tag != "Finish")
         {
-            
-            LeanTween.moveLocalX(MCam, x, Time).setEaseInOutBounce();
-            LeanTween.moveLocalZ(MCam, x2, Time).setEaseInOutBounce();
+
+            int R = Random.Range(0, 4);
+            Rv = RandomV[R];
+            Debug.Log(Rv);
+            Debug.Log(R);
+
+            LeanTween.moveLocalX(MCam, Rv, Time).setEaseInOutBounce();
+            LeanTween.moveLocalZ(MCam, Rv, Time).setEaseInOutBounce();
             Charge = Charge - 1;
             LeanTween.moveLocalX(MCam, 0, Time).setEaseInOutBounce();
             LeanTween.moveLocalZ(MCam, 0, Time).setEaseInOutBounce();
             Hit.Play();
         }
     }
+
+    
 
     void Update()
     {
