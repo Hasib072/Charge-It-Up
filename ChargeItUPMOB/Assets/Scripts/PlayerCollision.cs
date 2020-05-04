@@ -11,7 +11,7 @@ public class PlayerCollision : MonoBehaviour
     private AudioSource Hit;
     private GameObject MCam;
     
-    private int[] RandomV = {-150,100,150,-100};
+    private int[] RandomV = {-60,60,40,-40};
     private int Rv;
     private float Time = 0.6f;
    

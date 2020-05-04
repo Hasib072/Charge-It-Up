@@ -80,7 +80,7 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(NextLevel(SceneManager.GetActiveScene().buildIndex - 8));
         Time.timeScale = 1f;
-
+        
     }
 
     public void LoadMenu9()
@@ -128,9 +128,10 @@ public class LevelLoader : MonoBehaviour
         trans.SetTrigger("Start");
 
         yield return new WaitForSeconds(time);
-
+        
         SceneManager.LoadScene(LevelIndex);
 
+        
     }
 
     
