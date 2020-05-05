@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
 
+    private GameObject Atrans;
     public Animator trans;
     public float time;
     
-    void Start()
+    void Awake()
     {
-        
+        Atrans = GameObject.Find("Fade");
+        trans = Atrans.GetComponent<Animator>();
     }
 
     
