@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     //[SerializeField]
     private GameObject PlayerBody;
     private Rigidbody Player;
-    public float Speed;
+    private float Speed = 140;
     //public int Charge;
     private Vector3 Newmove;
     private bool MoveW, MW, MoveS, MS, MoveA, MA, MoveD, MD, IsStop;
